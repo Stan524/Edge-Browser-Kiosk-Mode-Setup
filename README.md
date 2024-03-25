@@ -78,6 +78,6 @@ Useful switches:
 - `--noerrdialogs`: Prevent error dialogs.
 - `--disable-infobars`: Prevent the yellow information bars.
 
-In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually altering the script and adding both the blank powerpoint and the kiosk url.
+In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually altering the script and adding both the blank powerpoint path and the kiosk url.
 
 On Windows 10, the cursor starts out hidden upon boot, and does not become visible before it's moved. This is perfect for kiosk screens.
