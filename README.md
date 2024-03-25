@@ -61,10 +61,10 @@ There are different tips on how to disable the lock screen. None of these worked
 For touch screens:
 
 1. Disable Edge swipe i Windows 10: https://www.tenforums.com/tutorials/48507-enable-disable-edge-swipe-screen-windows-10-a.html
-2- Disable Pinch Zoom option in Windows 10: https://answers.microsoft.com/en-us/windows/forum/windows_10-desktop-winpc/how-to-disable-pinch-zoom-option-in-windows-10/91124309-3177-4c7d-a52a-087f6e34772c
+2. Disable Pinch Zoom option in Windows 10: https://answers.microsoft.com/en-us/windows/forum/windows_10-desktop-winpc/how-to-disable-pinch-zoom-option-in-windows-10/91124309-3177-4c7d-a52a-087f6e34772c
 3. Disable right click in Windows 10: Open `Pen and Touch`, then go to `Press and Hold` and `Settings`, uncheck `Enable press and hold for right-clicking`. 
 Right clicking can also be disabled in the web page by javascript:
-`document.addEventListener('contextmenu', function(e) { e.preventDefault(); }, true);` 
+`document.addEventListener('contextmenu', function(e) { e.preventDefault(); }, true);`
 
 ## Prepare Edge startup script
 
