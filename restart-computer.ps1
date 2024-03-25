@@ -3,6 +3,9 @@
 # Author: Dan Michael
 # Modified: 2019-07-04
 
+# Modified by Stan524
+# 3-25-2024
+
 # ------------------------------------------------------------------------------------
 
 
@@ -16,7 +19,7 @@ Try {
 	Start-Sleep -Seconds 1
 } Catch {}
 
-$apps = @("POWERPNT", "chrome")
+$apps = @("POWERPNT", "msedge")
 foreach ($app in $apps) {
 
 	# Is it running?

@@ -7,9 +7,7 @@ This document contains:
 3. Prevent the screen from going black or enter screen saver
 4. Disable lock screen
 5. Disable Edge Swipe and Pinch Zoom
-6. Prepare Chrome startup script
-7. Prepare Firefox startup script
-
+6. Prepare Edge startup script
 
 ## Setup automatic login
 
@@ -37,7 +35,7 @@ To schedule this, do the following:
 4.	When asked `When do you want the task to start?`, select Daily. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-    and the path to your copy of the [restart-computer.ps1](https://github.com/scriptotek/browser-kiosk-windows-setup/blob/master/restart-computer.ps1) under "Add arguments (optional)". If it's not working, see
+    and the path to your copy of the [restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under "Add arguments (optional)". If it's not working, see
     [this guide](https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler)
     for info about setting execution policy.
 7.	Click Next to review all and finally click Finish.
@@ -82,15 +80,5 @@ Useful flags:
 
 There used to be a flag called `--disable-session-crashed-bubble` for [disabling the restore dialog](https://superuser.com/questions/461035/disable-google-chrome-session-restore-functionality) that is shown if Chrome did not exit cleanly. After the flag was removed, the only way to avoid the restore dialog seems to be to manually alter the Preferences file (or lock it).
 In the [start-chrome-kiosk.ps1](https://github.com/scriptotek/browser-kiosk-windows-setup/blob/master/start-chrome-kiosk.ps1) script, we are manually altering the file.
-
-
-
-## Prepare Firefox startup script
-
-Todo
-
-## Hiding the mouse cursor
-
-On Windows 7, the cursor starts out visible in the middle of the screen upon boot, so we used to use [AutoHideMouseCursor](https://www.softwareok.com/?seite=Microsoft/AutoHideMouseCursor) to hide it after a short delay, say 5 seocnds.
 
 On Windows 10, the cursor starts out hidden upon boot, and does not become visible before it's moved. This is perfect for kiosk screens.
