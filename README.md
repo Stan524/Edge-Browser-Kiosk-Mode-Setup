@@ -1,5 +1,5 @@
-# Tools and tips for Windows 10/11 Edge in Kiosk mode
-Tools and tips for setting up a Windows 10/11 PC with Edge and Chromium based derivatives in Kiosk mode.
+# Scripts and tips for Windows 10/11 Edge in Kiosk mode
+Scripts and tips for setting up a Windows 10/11 PC with Edge and Chromium based derivatives in Kiosk mode.
 
 This document contains:
 
@@ -27,8 +27,8 @@ You will have to either change or create new entries depending on whether they a
 
 ## Setup nightly reboots
 
-It can be a good idea to do a reboot every night (or every week if you like), to ensure updates are run and so on.
-To schedule this, do the following:
+It is a good idea to do a reboot every night or at least once a week, to ensure updates are run.
+To schedule reboots, follow along:
 
 1.	As administrator, press the Windows key and type `Task Scheduler` and Enter.
 2.	In the right panel, click on `Create Basic Task`.
@@ -36,7 +36,7 @@ To schedule this, do the following:
 4.	When asked `When do you want the task to start?`, select `Daily`. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-    and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\'[restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
+    and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\ '[restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
 7.	Click Next to review all and finally click Finish.
 
 ### If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy.
@@ -49,7 +49,7 @@ To schedule this, do the following:
 4.	When asked `When do you want the task to start?`, select `When I log on`. Click Next.
 5.	When asked `What action do you wan the task to perform?` select `Start a program`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-	and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\'[start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
+	and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\ '[start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
 7.	Click Next to review all and finally click Finish.
 
 ## Prevent the screen from sleeping or entering screen saver
