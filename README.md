@@ -36,8 +36,10 @@ To schedule this, do the following:
 4.	When asked `When do you want the task to start?`, select `Daily`. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-    and the path to your copy of the [restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy.
+    and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\'[restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
 7.	Click Next to review all and finally click Finish.
+
+### If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy.
 
 ## Running Kiosk mode on boot
 
@@ -47,8 +49,8 @@ To schedule this, do the following:
 4.	When asked `When do you want the task to start?`, select `When I log on`. Click Next.
 5.	When asked `What action do you wan the task to perform?` select `Start a program`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-	and enter the path to [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
-7.	
+	and enter the path to '-ExecutionPolicy Bypass PATH\TO\SCRIPT\'[start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
+7.	Click Next to review all and finally click Finish.
 
 ## Prevent the screen from sleeping or entering screen saver
 
