@@ -12,7 +12,7 @@ This document contains:
 
 ## Setup automatic login
 
-You will need to have two local users: one administrator (for setting things up) and one non-administrator (for auto-login). Once you have this, do the following:
+You will need to have two local users: one administrator (for setup) and one non-administrator (for kiosk auto-login). Once you have this, do the following:
 
 1. As administrator, press the Windows key and type "regedit" and Enter.
 You will have to either change or create new entries depending on whether they already exist or not.
@@ -32,7 +32,7 @@ To schedule reboots, follow along:
 
 1.	As administrator, press the Windows key and type `Task Scheduler` and Enter.
 2.	In the right panel, click on `Create Basic Task`.
-3.	Name `Automatic restart every night` and click Next.
+3.	Name `KioskNightlyReboot` and click Next.
 4.	When asked `When do you want the task to start?`, select `Daily`. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
@@ -45,7 +45,7 @@ To schedule reboots, follow along:
 
 1.	As administrator, press the Windows key and type `Task Scheduler` and Enter.
 2.	In the right panel, click on `Create Basic Task`.
-3.	Name `Run kiosk on boot` and click Next.
+3.	Name `KioskOnBoot` and click Next.
 4.	When asked `When do you want the task to start?`, select `When I log on`. Click Next.
 5.	When asked `What action do you wan the task to perform?` select `Start a program`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
@@ -74,6 +74,8 @@ See [start-Edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Se
 
 The most important switch is the `--kiosk` switch, but there's also some more that are useful. Edge and Chrome are based on the chromium project. Unfortunately, the switches tend to change from version to version without much notice, so always check with the updated list of working switches here: https://peter.sh/experiments/chromium-command-line-switches/
 
+### On Windows 10, the cursor starts out hidden and does not become visible until it is moved. This is perfect for kiosk screens.
+
 Useful switches:
 
 - `--kiosk` : Enable kiosk mode (fullscreen with no menus)
@@ -82,8 +84,7 @@ Useful switches:
 
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
-### On Windows 10, the cursor starts out hidden and does not become visible until it is moved. This is perfect for kiosk screens.
-
 ### Soon<sup>TM</sup>
 	- add firefox support
 	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
+	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
