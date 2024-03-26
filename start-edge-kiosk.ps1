@@ -16,7 +16,6 @@ $kioskUrl = "REPLACE ME"
 
 # ------------------------------------------------------------------------------------
 
-
 # 1. Ensure clean slate where nothing is running already
 $apps = @("POWERPNT", "msedge")
 foreach ($app in $apps) {

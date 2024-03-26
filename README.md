@@ -1,5 +1,5 @@
-# Tools and tips for Windows 10/11 Browser Kiosk mode in Edge
-Various tools and tips to set up a Windows 10 PC with Edge and Chromium based derivatives in Kiosk mode.
+# Tools and tips for Windows 10/11 Edge in Kiosk mode
+Tools and tips for setting up a Windows 10/11 PC with Edge and Chromium based derivatives in Kiosk mode.
 This document contains:
 
 1. Setup automatic login
@@ -31,12 +31,22 @@ To schedule this, do the following:
 
 1.	As administrator, press the Windows key and type `Task Scheduler` and Enter.
 2.	In the right panel, click on `Create Basic Task`.
-3.	Give it a name (like `Automatic restart every night`) and click Next.
-4.	When asked `When do you want the task to start?`, select Daily. Click Next.
+3.	Name `Automatic restart every night` and click Next.
+4.	When asked `When do you want the task to start?`, select `Daily`. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
     and the path to your copy of the [restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under "Add arguments (optional)". If it's not working, see [this guide](https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler) for info about setting execution policy.
 7.	Click Next to review all and finally click Finish.
+
+## Running Kiosk mode on boot
+
+1.	As administrator, press the Windows key and type `Task Scheduler` and Enter.
+2.	In the right panel, click on `Create Basic Task`.
+3.	Name `Run kiosk on boot` and click Next.
+4.	When asked `When do you want the task to start?`, select `When I log on`. Click Next.
+5.	When asked `What action do you wan the task to perform?` select `Start a program`
+6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
+7.	
 
 ## Prevent the screen from going black or enter screen saver
 
@@ -52,15 +62,7 @@ For `Windows 10 Pro`, go here to find a useful instruction: https://www.tenforum
 
 ## Disable lock screen
 
-There are different tips on how to disable the lock screen. None of these worked for us, since it's enforced by policy (the central IT administration has promised us a different policy for kiosk screens, but it hasn't materialized yet), so we have to do the "powerpoint trick". The computer will not lock while a presentation is running, so we start a Powerpoint presentation before starting Edge in Kiosk mode.
-
-## Disable Edge Swipe and Pinch Zoom
-
-For touch screens:
-
-1. Disable Edge swipe i Windows 10: https://www.tenforums.com/tutorials/48507-enable-disable-edge-swipe-screen-windows-10-a.html
-2. Disable Pinch Zoom option in Windows 10: https://answers.microsoft.com/en-us/windows/forum/windows_10-desktop-winpc/how-to-disable-pinch-zoom-option-in-windows-10/91124309-3177-4c7d-a52a-087f6e34772c
-3. Disable right click in Windows 10: Open `Pen and Touch`, then go to `Press and Hold` and `Settings`, uncheck `Enable press and hold for right-clicking`. 
+There are different tips on how to disable the lock screen. None of these worked for us, since it's enforced by policy by GPO that is controlled by our Central IT. We were promised us a more permissive policy for kiosks, but progress is slow, so we have to do the "powerpoint trick". The computer will not lock while a presentation is running in the background.
 
 ## Prepare Edge startup script
 
@@ -76,4 +78,4 @@ Useful switches:
 
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
-On Windows 10, the cursor starts out hidden upon boot, and does not become visible before it's moved. This is perfect for kiosk screens.
+On Windows 10, the cursor starts out hidden and does not become visible until it is moved. This is perfect for kiosk screens.

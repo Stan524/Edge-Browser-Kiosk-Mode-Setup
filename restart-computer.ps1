@@ -8,7 +8,6 @@
 
 # ------------------------------------------------------------------------------------
 
-
 # The following method works gracefully even if document recovery is visible
 Try {
 	$app = [System.Runtime.InteropServices.Marshal]::GetActiveObject("Powerpoint.Application")
