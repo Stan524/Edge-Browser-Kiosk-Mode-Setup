@@ -42,7 +42,3 @@ Write-Host "Starting browser"
 $edge = Join-Path ${env:ProgramFiles(x86)} "Microsoft\Edge\Application\msedge.exe"
 $edge_args= "--kiosk $kioskUrl --edge-kiosl-type=fullscreen"
 Start-Process $edge $edge_args
-
-# Debug:
-# write-host "Press any key to close"
-# [void][System.Console]::ReadKey($true)

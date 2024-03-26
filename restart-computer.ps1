@@ -1,5 +1,5 @@
 # Scriptoteket reboot script for kiosk screens
-# Exits Powerpoint and Chrome gracefully before rebooting.
+# Exits Powerpoint and Edge gracefully before rebooting.
 # Author: Dan Michael
 # Modified: 2019-07-04
 
