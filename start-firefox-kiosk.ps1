@@ -17,7 +17,7 @@ $kioskUrl = "REPLACE ME"
 # ------------------------------------------------------------------------------------
 
 # 1. Ensure clean slate where nothing is running already
-$apps = @("POWERPNT", "msedge")
+$apps = @("POWERPNT", "firefox")
 foreach ($app in $apps) {
 	Get-Process -Name $app -ErrorAction SilentlyContinue | Stop-Process
 	Wait-Process -Name $app -ErrorAction SilentlyContinue
@@ -36,8 +36,8 @@ do {
 	$ping = Test-Connection -ComputerName uio.no -Count 1 -Quiet
 } until ($ping)
 
-# 4. Start Edge
+# 4. Start Firefox
 Write-Host "Starting browser"
-$edge = Join-Path ${env:ProgramFiles(x86)} "Microsoft\Edge\Application\msedge.exe"
-$edge_args= "--kiosk $kioskUrl --edge-kiosk-type=fullscreen"
-Start-Process $edge $edge_args
+$firefox = Join-Path ${env:ProgramFiles} "Mozilla Firefox\firefox.exe"
+$firefox_args= "--kiosk $kioskUrl"
+Start-Process $firefox $firefox_args
