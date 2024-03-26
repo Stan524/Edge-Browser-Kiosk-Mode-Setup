@@ -15,10 +15,10 @@ Try {
 	$app.DisplayAlerts = $false
 	$app.Quit()
 	Wait-Process -Name POWERPNT -ErrorAction SilentlyContinue -Timeout 4
-	Start-Sleep -Seconds 1
+	Start-Sleep 1
 } Catch {}
 
-$apps = @("POWERPNT", "msedge")
+$apps = @("POWERPNT", "msedge", "chrome" , "firefox")
 foreach ($app in $apps) {
 
 	# Is it running?
@@ -32,7 +32,7 @@ foreach ($app in $apps) {
 			$_.CloseMainWindow() | Out-Null
 		}
 		Wait-Process -Name $app -ErrorAction SilentlyContinue -Timeout 4
-		Start-Sleep -Seconds 1
+		Start-Sleep 1
 
 		# If still running, kill it.
 		Get-Process $app -ErrorAction SilentlyContinue | Foreach-Object {
@@ -40,11 +40,11 @@ foreach ($app in $apps) {
 			Stop-Process $_ -Force | Out-Null
 		}
 		Wait-Process -Name $app -ErrorAction SilentlyContinue -Timeout 4
-		Start-Sleep -Seconds 1
+		Start-Sleep 1
 	}
 }
 
 Write-Host "Restarting computer"
-Start-Sleep -Seconds 10
+Start-Sleep 10
 
 Restart-Computer -Force
