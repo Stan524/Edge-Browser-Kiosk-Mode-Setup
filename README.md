@@ -5,9 +5,9 @@ This document contains:
 
 1. Setup automatic login
 2. Setup nightly reboots
-3. Prevent the screen from going black or enter screen saver
-4. Disable lock screen
-5. Disable Edge Swipe and Pinch Zoom
+3. Running Kiosk mode on boot
+4. Preventing sleeping / disabling screen saver
+5. Disable lock screen
 6. Prepare Edge startup script
 
 ## Setup automatic login
@@ -52,7 +52,7 @@ To schedule reboots, follow along:
 	and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\[start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
 7.	Click Next to review all and finally click Finish.
 
-## Prevent the screen from sleeping or entering screen saver
+## Preventing sleeping / disabling screen saver
 
 Prevent screen from going black:
 1. Click on the Windows-icon on the start menu and type `Power Options`
