@@ -39,7 +39,7 @@ To schedule reboots, follow along:
     and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\[restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
 7.	Click Next to review all and finally click Finish.
 
-### If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy.
+** If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy. **
 
 ## Running Kiosk mode on boot
 
@@ -74,7 +74,7 @@ See [start-Edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Se
 
 The most important switch is the `--kiosk` switch, but there's also some more that are useful. Edge and Chrome are based on the chromium project. Unfortunately, the switches tend to change from version to version without much notice, so always check with the updated list of working switches here: https://peter.sh/experiments/chromium-command-line-switches/
 
-### On Windows 10, the cursor starts out hidden and does not become visible until it is moved. This is perfect for kiosk screens.
+** On Windows 10, the cursor starts out hidden and does not become visible until it is moved. This is perfect for kiosk screens. **
 
 Useful switches:
 
@@ -84,7 +84,7 @@ Useful switches:
 
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
-### Soon<sup>TM</sup>
+** Soon<sup>TM</sup> **
 	- add firefox support
 	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
