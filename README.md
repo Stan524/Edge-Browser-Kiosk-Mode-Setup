@@ -36,7 +36,7 @@ To schedule reboots, follow along:
 4.	When asked `When do you want the task to start?`, select `Daily`. Click Next.
 5.	Select some time in the night, like `05:00:00`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-    and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\[restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
+    and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\ [restart-computer.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/restart-computer.ps1) under `Add arguments (optional)`. 
 7.	Click Next to review all and finally click Finish.
 
 **If it's not working, see https://community.spiceworks.com/how_to/17736-run-powershell-scripts-from-task-scheduler for info about setting execution policy.**
@@ -49,7 +49,7 @@ To schedule reboots, follow along:
 4.	When asked `When do you want the task to start?`, select `When I log on`. Click Next.
 5.	When asked `What action do you wan the task to perform?` select `Start a program`
 6.	Clicking Next will bring you to the Action page. Enter "powershell.exe" under "Program/script",
-	and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\[start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
+	and enter the path to -ExecutionPolicy Bypass PATH\TO\SCRIPT\ [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) under `Add arguments (optional)`
 7.	Click Next to review all and finally click Finish.
 
 ## Preventing sleeping / disabling screen saver
@@ -81,6 +81,7 @@ Useful switches:
 - `--kiosk` : Enable kiosk mode (fullscreen with no menus)
 - `--noerrdialogs`: Prevent error dialogs.
 - `--disable-infobars`: Prevent the yellow information bars.
+- `--inprivate` \ `--incognito`: inprivate on edge incognito on other chromium browsers
 
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
@@ -88,3 +89,4 @@ In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode
 	- add firefox support
 	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
+	
