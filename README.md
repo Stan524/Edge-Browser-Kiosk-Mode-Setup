@@ -86,6 +86,7 @@ Useful switches:
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
 **Soon<sup>TM</sup>**
+
 	- add firefox support
 	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
