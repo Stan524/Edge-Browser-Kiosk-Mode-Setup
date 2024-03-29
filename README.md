@@ -70,7 +70,7 @@ There are different tips on how to disable the lock screen. None of these worked
 
 ## Prepare Edge startup script
 
-See [start-Edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) for an example startup script for Edge.
+See [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) for an example startup script for Edge.
 
 The most important switch is the `--kiosk` switch, but there's also some more that are useful. Edge and Chrome are based on the chromium project. Unfortunately, the switches tend to change from version to version without much notice, so always check with the updated list of working switches here: https://peter.sh/experiments/chromium-command-line-switches/
 
@@ -90,4 +90,3 @@ In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode
 	- add firefox support
 	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
-	
