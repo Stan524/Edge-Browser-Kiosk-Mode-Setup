@@ -81,13 +81,14 @@ Useful switches:
 - `--kiosk` : Enable kiosk mode (fullscreen with no menus)
 - `--noerrdialogs`: Prevent error dialogs.
 - `--disable-infobars`: Prevent the yellow information bars.
-- `--inprivate` \ `--incognito`: inprivate on edge incognito on other chromium browsers
+- `--inprivate` \ `--incognito`: inprivate on edge and incognito on other chromium browsers
 
 In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode-Setup/blob/master/start-edge-kiosk.ps1) script, we are manually adding both the blank powerpoint path and the kiosk url.
 
 **Soon<sup>TM</sup>**
 
-	- add firefox support
-	- priority of browsers to use edge chrome firefox so it is not hardcoded to a single browser
+	- Improve firefox support
+	- priority of browsers to use edge/chrome/firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
+	- Unify the start scripts
 	
