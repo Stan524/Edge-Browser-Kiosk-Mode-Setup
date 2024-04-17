@@ -8,7 +8,8 @@ This document contains:
 3. Running Kiosk mode on boot
 4. Preventing sleeping / disabling screen saver
 5. Disable lock screen
-6. Prepare Edge startup script
+6. Enable Focus assist
+7. Prepare Edge startup script
 
 ## Setup automatic login
 
@@ -68,6 +69,13 @@ For `Windows 10 Pro`, go here to find a useful instruction: https://www.tenforum
 
 There are different tips on how to disable the lock screen. None of these worked for us, since it's enforced by policy by GPO that is controlled by our Central IT. We were promised us a more permissive policy for kiosks, but progress is slow, so we have to do the "powerpoint trick". The computer will not lock while a presentation is running in the background.
 
+## Enable Focus assist
+
+To help suppress the random windows notifications that popup from time to time
+1. Go to Settings 
+2. System 
+3. Focus assist and set it to 'Alarms only'
+
 ## Prepare Edge startup script
 
 **This part applies to all of the browser scripts.**
@@ -93,4 +101,5 @@ In the [start-edge-kiosk.ps1](https://github.com/Stan524/Edge-Browser-Kiosk-Mode
 	- priority of browsers to use edge/chrome/firefox so it is not hardcoded to a single browser
 	- add a way of rebooting if the machine hangs/freezes and becomes unresponsive randomly
 	- Unify the start scripts
+	- See the long term effectiveness of Focus assist
 	
